@@ -14,4 +14,3 @@ elif digit < 6 and digit != 0:
     print('less than 6 and not 0')
 elif digit > 5:
     print('greater than 5')
-
