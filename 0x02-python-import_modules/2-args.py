@@ -8,7 +8,7 @@ def main():
         print('{} arguments.'.format(arguments))
     elif arguments == 1:
         print('1 argument:')
-        print('1: {}'.format(argvs[1]))
+        print('1: {}'.format(argv[1]))
     else:
         print('{} arguments:'.format(arguments))
         for argument in range(0, arguments):
