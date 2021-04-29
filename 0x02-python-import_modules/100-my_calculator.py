@@ -10,14 +10,12 @@ if __name__ == "__main__":
     
     a = int(argv[1])
     b = int(argv[3])
-    operators = { '+' : add,
-                  '-' : sub,
-                  '*' : mul,
-                  '/' : div}
+
+    operators = { '+' : add, '-' : sub,'*' : mul, '/' : div }
     operator = argv[2]
 
     if not operator in operators:
         print('Unknown operator. Available operators: +, -, * and /')
         exit(1)
 
-    print('{:d} + {:d} = {:d}'.format(a, b, operators[operator](a, b)))
+    print('{:d} {} {:d} = {:d}'.format(a, operator, b, operators[operator](a, b)))
