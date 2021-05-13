@@ -1,0 +1,44 @@
+say_my_name module
+------------------
+
+Importing "say_my_name"
+-----------------------
+
+Import file
+>>> say_my_name = __import__('3-say_my_name').say_my_name
+
+Testing for a valid input
+>>> say_my_name("Sandro", "Saab")
+My name is Sandro Saab
+
+Testing for second valid input
+>>> say_my_name("Sandro")
+My name is Sandro 
+
+Testing for name with spaces
+>>> say_my_name("Jean Marc", "La Fontaine")
+My name is Jean Marc La Fontaine
+
+Testing for invalid input
+>>> say_my_name(12, "White")
+Traceback (most recent call last):
+TypeError: first_name must be a string
+
+Testing for number input
+>>> say_my_name("Sandro", 12)
+Traceback (most recent call last):
+TypeError: last_name must be a string
+
+Testing for two numbers
+>>> say_my_name(123, 45)
+Traceback (most recent call last):
+TypeError: first_name must be a string
+
+Testing numbers as strings
+>>> say_my_name("11", "06 ")
+My name is 11 06 
+
+Testing empty string
+>>> say_my_name('    ')
+Traceback (most recent call last):
+ValueError: first name can't be empty
