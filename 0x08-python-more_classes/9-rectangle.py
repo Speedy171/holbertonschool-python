@@ -12,8 +12,8 @@ class Rectangle:
 
     def __init__(self, width=0, height=0):
         """Initialize"""
-        self.__width = width
-        self.__height = height
+        self.width = width
+        self.height = height
         Rectangle.number_of_instances += 1
 
     def area(self):
@@ -54,7 +54,6 @@ class Rectangle:
             raise ValueError("height must be >= 0")
         self.__height = value
 
-    @staticmethod
     def bigger_or_equal(rect_1, rect_2):
         """Return rectangle with the largest area"""
         if type(rect_1) not in [Rectangle]:
