@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 """
-inherits_from Module checks that obj is subclass of a_class
+inherits_from Module
 """
 
 
