@@ -1,10 +1,14 @@
 #!/usr/bin/python3
-
-"""
-inherits_from Module
-"""
+"""Module 4-inherits_from.py"""
 
 
 def inherits_from(obj, a_class):
-    """Returns True if the object is an instance of the class that inherited from"""
-    return isinstance(obj, a_class) and type(obj) != a_class
+    """check if the class of obj
+     inhertis from a_class
+     """
+    if a_class == type(obj):
+        return False
+    elif a_class in type(obj).mro():
+        return True
+    else:
+        return False
