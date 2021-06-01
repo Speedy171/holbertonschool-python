@@ -85,7 +85,8 @@ class Base:
     @classmethod
     def save_to_file_csv(cls, list_objs):
         """CSV Format"""
-        if type(list_objs) != list and list_objs is not None or not all(isinstance(x, cls) for x in list_objs):
+        if type(list_objs) != list and list_objs is not None \
+                or not all(isinstance(x, cls) for x in list_objs):
             raise TypeError("list_objs must be a list")
         filename = cls.__name__ + ".csv"
         with open(filename, "w") as f:
