@@ -17,7 +17,6 @@ def count_words(subreddit, word_list, res=defaultdict(int), after=None):
             Safari/537.36"
     headers = {"User-Agent": agent}
     url = 'https://www.reddit.com/r/{}/hot.json'.format(subreddit)
-    
     if after:
         url += '?after={}'.format(after)
     try:
@@ -25,8 +24,7 @@ def count_words(subreddit, word_list, res=defaultdict(int), after=None):
         titles = req.get('data').get('children')
         for title in titles:
             count = Counter(title.get('data').get('title').lower().split(' '))
-            words = word_list.split()
-            for x in words:
+            for x in word_list:
                 if x.lower() in count:
                     res[x] += count.get(x.lower())
         after = req.get('data').get('after')
